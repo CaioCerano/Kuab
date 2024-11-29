@@ -84,7 +84,7 @@ const ColorCard: React.FC<{ color: ColorInfo }> = ({ color }) => {
 
 export const DesignTab: React.FC<DesignTabProps> = ({ colors, spacing, typography }) => {
     return (
-        <ScrollArea className="h-[400px] w-full pr-4">
+        <ScrollArea className="h-full w-full pr-4">
             <div className="space-y-6">
                 {/* Color Palette */}
                 <Card>
