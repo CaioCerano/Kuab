@@ -6,7 +6,21 @@ export default defineConfig({
 		description: '__MSG_extension_description__',
 		name: '__MSG_extension_name__',
 		action: {}, // This is necessary to enable the toolbar button
-		permissions: ['sidePanel', 'activeTab', 'scripting'], // 'sidePanel' is required for sidebar functionality
+		permissions: [
+			'sidePanel',
+			'activeTab',
+			'scripting',
+			'tabs',
+		],
+		host_permissions: [
+			"<all_urls>"
+		],
+		browser_specific_settings: {
+			gecko: {
+				id: "caiocerano@gmail.com",
+				strict_min_version: "109.0"
+			}
+		}
 	},
 	modules: [
 		'@wxt-dev/module-react',

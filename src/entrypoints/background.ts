@@ -3,16 +3,13 @@ import { defineBackground } from 'wxt/sandbox'
 export default defineBackground(() => {
 	console.log('Background script', { id: browser.runtime.id })
 
-	const isFirefox = () => {
-		return typeof browser !== 'undefined' && navigator.userAgent.includes('Firefox')
-	}
-
-	if (isFirefox()) {
+	if (import.meta.env.FIREFOX) {
 		// Firefox-specific implementation
 		browser.browserAction.onClicked.addListener(() => {
 			browser.sidebarAction.toggle()
 		})
-	} else {
+	}
+	else if (import.meta.env.CHROME) {
 		// Chrome-specific implementation
 		// @ts-ignore
 		browser.sidePanel
