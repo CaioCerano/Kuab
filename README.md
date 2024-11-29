@@ -1,3 +1,4 @@
+https://github.com/mefengl/wxt-starter
 # WXT Starter
 
 Build upon amazing [wxt](wxt.dev) framework.

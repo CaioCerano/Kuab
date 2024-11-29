@@ -1,11 +1,28 @@
 {
-  "extends": "./.wxt/tsconfig.json",
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    },
-    "allowImportingTsExtensions": true
-  }
+	"extends": "./.wxt/tsconfig.json",
+	"compilerOptions": {
+		"jsx": "react-jsx",
+		"baseUrl": ".",
+		"paths": {
+			"@/*": [
+				"./src/*"
+			]
+		},
+		"allowImportingTsExtensions": true,
+		"typeRoots": [
+			"./node_modules/@types",
+			"./src/types"
+		],
+		"types": [
+			"chrome",
+			"firefox-webext-browser"
+		],
+		"strict": true,
+		"target": "ES2015",
+		"lib": [
+			"dom",
+			"dom.iterable",
+			"esnext"
+		],
+	}
 }
